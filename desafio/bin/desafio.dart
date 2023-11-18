@@ -1,5 +1,6 @@
-import 'package:desafio/desafio.dart' as desafio;
+import 'package:desafio/desafio.dart';
 
-void main(List<String> arguments) {
-  print('Hello world: ${desafio.calculate()}!');
+void main() {
+  print('Resultado com numero 10: ${calculate(10)}!');
+  print('Resultado com numero 11: ${calculate(11)}!');
 }
