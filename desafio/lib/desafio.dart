@@ -1,4 +1,4 @@
-int calculate(int numero) {
+int calcular(int numero) {
   int somatorio = 0;
 
   for (var indice = 0; indice < numero; indice++) {
