@@ -4,7 +4,7 @@ void main() {
   bool sair = false;
 
   while (!sair) {
-    print("Escolha um número inteiro ou digite sair");
+    print('Escolha um número inteiro positivo ou digite sair\n');
 
     String? entrada = stdin.readLineSync();
 
@@ -16,12 +16,14 @@ void main() {
 
       int? entradaInteiro = int.tryParse(entrada);
 
-      if (entradaInteiro != null) {
-        print("Resultado: ${calcular(entradaInteiro)}!");
+      if (entradaInteiro == null) {
+        print('\nVocê não digitou um número\n');
+      } else if (entradaInteiro < 0) {
+        print('\nVocê não digitou um número positivo\n');
+      } else {
+        print('\nResultado: ${calcular(entradaInteiro)}!\n');
         sair == true;
         return;
-      } else {
-        print('Você não digitou um número');
       }
     }
   }
